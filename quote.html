@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free Quote | Deluxe Painting LLC</title>
+<meta name="description" content="Request a free painting quote from Deluxe Painting LLC in Denver, Colorado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HousePainter",
+  "name": "Deluxe Painting LLC",
+  "telephone": "720-288-7356",
+  "email": "deluxepainting0@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
+  "areaServed": { "@type": "State", "name": "Colorado" },
+  "founder": "Alfredo Arredondo",
+  "description": "Residential and commercial painting in Denver and across Colorado: interior and exterior painting, cabinet refinishing, deck and fence staining, power washing."
+}
+</script>
+</head>
+<body>
+<div class="promo" id="promo">
+  <div class="wrap">
+    <span><b>Fall special:</b> 10% off exterior painting booked before November 15.</span>
+    <a href="quote.html">Claim your quote</a>
+  </div>
+</div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="images/dp-monogram.png" alt="Deluxe Painting LLC logo" width="210" height="160">
+      <span class="brand-name">Deluxe Painting<small>LLC · Denver, Colorado</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="nav" id="site-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="areas.html">Service Areas</a>
+      <a href="gallery.html">Our Work</a>
+      <a class="phone" href="tel:+17202887356">720-288-7356</a>
+      <a class="btn btn-primary" href="quote.html">Get a Free Quote</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="section">
+    <div class="wrap quote-grid">
+      <div>
+        <p class="eyebrow">Free quote</p>
+        <h1>Get your free painting quote</h1>
+        <p class="lead" style="margin-top:1rem">Tell us about the project and we'll get back to you with a free estimate.</p>
+        <div class="contact-lines">
+          <div><span class="label">Call or text</span><span class="value">720-288-7356</span></div>
+          <div><span class="label">Email</span><span class="value">deluxepainting0@gmail.com</span></div>
+        </div>
+      </div>
+      <form class="quote" id="quote-form" action="YOUR-FORM-ENDPOINT" method="POST">
+        <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2" placeholder="Denver"></div>
+        <fieldset class="field full">
+          <legend>What needs painting?</legend>
+          <div class="checks">
+            <label><input type="checkbox" id="svc-int" name="service" value="Interior"> Interior</label>
+            <label><input type="checkbox" id="svc-ext" name="service" value="Exterior"> Exterior</label>
+            <label><input type="checkbox" id="svc-cab" name="service" value="Cabinets"> Cabinets</label>
+            <label><input type="checkbox" id="svc-deck" name="service" value="Deck or fence"> Deck or fence</label>
+            <label><input type="checkbox" id="svc-wash" name="service" value="Power washing"> Power washing</label>
+            <label><input type="checkbox" id="svc-other" name="service" value="Other"> Something else</label>
+          </div>
+        </fieldset>
+        <div class="field full"><label for="details">Tell us about the project</label><textarea id="details" name="details" placeholder="Rooms, square footage, colors you have in mind, timeline..."></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit">Send my free quote request</button></div>
+        <p class="form-note full">Free estimates. No pressure, no obligation.</p>
+        <p class="form-status full" id="form-status" hidden></p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h3>Deluxe Painting LLC</h3>
+      <p>Residential &amp; commercial painting. Owner Alfredo Arredondo. Based in Denver, serving all of Colorado.</p>
+    </div>
+    <div>
+      <h3>Services</h3>
+      <ul>
+        <li><a href="services.html#interior">Interior painting</a></li>
+        <li><a href="services.html#interior">Exterior painting</a></li>
+        <li><a href="services.html#cabinets">Cabinet refinishing</a></li>
+        <li><a href="services.html#decks">Deck &amp; fence staining</a></li>
+        <li><a href="services.html#commercial">Commercial repaints</a></li>
+        <li><a href="services.html#washing">Power washing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="tel:+17202887356">720-288-7356</a></li>
+        <li><a href="mailto:deluxepainting0@gmail.com">deluxepainting0@gmail.com</a></li>
+        <li><a href="https://g.page/r/CSCr_DFpdUwXEBM/review" target="_blank" rel="noopener">Leave us a Google review</a></li>
+      </ul>
+    </div>
+    <p class="fine">© <span id="year">2026</span> Deluxe Painting LLC. Free estimates.</p>
+  </div>
+</footer>
+<div class="call-bar">
+  <a class="btn btn-ghost" href="tel:+17202887356">Call now</a>
+  <a class="btn btn-primary" href="quote.html">Free Quote</a>
+</div>
+<script>
+  var t = document.getElementById('menu-toggle'), n = document.getElementById('site-nav');
+  t.addEventListener('click', function () {
+    var open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
