@@ -211,7 +211,8 @@
           <div><span class="label">Email</span><span class="value">deluxepainting0@gmail.com</span></div>
         </div>
       </div>
-      <form class="quote" id="quote-form" action="YOUR-FORM-ENDPOINT" method="POST">
+      <form class="quote" id="quote-form" action="https://formspree.io/f/xkjgakyl" method="POST">
+        <input type="hidden" name="_subject" value="New quote request from the website">
         <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
         <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
         <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
@@ -274,6 +275,22 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
   document.getElementById('year').textContent = new Date().getFullYear();
+  var f = document.getElementById('quote-form');
+  if (f && f.getAttribute('action')) f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var s = document.getElementById('form-status'), b = f.querySelector('button[type=submit]');
+    var d = {};
+    new FormData(f).forEach(function (v, k) { d[k] = d[k] ? d[k] + ', ' + v : v; });
+    b.disabled = true; s.hidden = false; s.textContent = 'Sending...';
+    fetch(f.action, { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify(d) })
+      .then(function (r) {
+        if (!r.ok) throw 0;
+        f.reset();
+        s.textContent = 'Thanks! Your request was sent. We will call you soon to set up your free estimate.';
+      })
+      .catch(function () { s.textContent = 'Sorry, that did not go through. Please call us at 720-288-7356.'; })
+      .finally(function () { b.disabled = false; });
+  });
 </script>
 </body>
 </html>
